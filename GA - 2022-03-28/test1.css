@@ -1,7 +1,9 @@
-* {
+* 
+{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    user-select: none;
 }
 
 body
@@ -20,18 +22,46 @@ body
     width: 300px;
     background-color: #e1f5fe;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     border: solid thin grey; 
     border-radius: 5px;
 }
 
 form
 {
-    margin: 10px;
-    
+    margin-bottom: 20px;
+}
+
+.switchKeys 
+{
+    height: 20px;
+    width: 85px;
+    background-color: #FFFFFF;
+}
+
+.switchKeys:hover
+{
+    cursor: pointer;
+    background-color: #DDDDDD;
 }
 
 #keyboardContainer
+{
+    display: flex;
+    flex-direction: row;
+    height: 350px;
+    width: 560px;
+    border: solid thin black;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 20px;
+    background-color: white; 
+}
+
+/* #keyboardContainer
 {
     display: flex;
     flex-direction: row;
@@ -43,14 +73,48 @@ form
     align-items: center;
     margin-top: 20px;
     background-color: white; 
-}
+} */
 
 .keybox
 {
     position: relative;
-    background-color: antiquewhite;
     width: 80px;
     height: 350px;
+}
+.keyboardKeys
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #888888;
+    color: white;
+    height: 25px;
+    width: 25px;
+    /* margin-bottom: 80%; */
+    /*position: absolute;*/
+    margin: 10px;
+    filter: drop-shadow(-1px 1px 1px #000000);
+    border-radius: 3px;
+    opacity: 0.5;
+}
+
+.keyboardkeysSharp
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #888888;
+    color: white;
+    height: 25px;
+    width: 25px;
+    /* margin-bottom: 80%; */
+    margin: 30px;
+    position: absolute;
+    filter: drop-shadow(-1px 1px 1px #FFFFFF);
+    border-radius: 3px;
+    opacity: 0.8;
 }
 
 .regular
@@ -60,15 +124,16 @@ form
     height: 100%;
     border: solid thin black;
     display: flex;
-    justify-content: center;
-    align-items: flex-end;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
     padding: 10px;
     color: black;
 }
 
 .regular:hover
 {
-    background-color: cornflowerblue;
+    background-color: #03DCFF;
 }
 
 .sharp
@@ -89,17 +154,35 @@ form
 
 .sharp:hover
 {
-    opacity: 80%;
+    border: solid thin black;
+    background-color: #03DCFF;
 }
 
-#tutorial
+.tutorialBox
 {
-    margin-top: 50px;
-    height: 200px; 
-    width: 400px; 
+    margin-top: 10px;
+    height: 300px; 
+    width: 560px; 
     display: flex;
     flex-direction: column;
     align-items: center;
+    border: solid thin black;
+    background-color: #DDDDDD;
+}
+
+.tutorialboxKeys
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: solid thin black;
+    opacity: 100;
+    background-color: #FFFFFF;
+    margin: 20px;
+    padding: 10px;
+    height: 35%; 
+    width: 55%; 
+    letter-spacing: 2px;
 }
 
 h3
@@ -109,4 +192,10 @@ h3
 p
 {
     font-size: 30px;
+}
+h5
+{
+    font-size: 19px;
+    font-weight: lighter;
+    margin-bottom: 5px;
 }
